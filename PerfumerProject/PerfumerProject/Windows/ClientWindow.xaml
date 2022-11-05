@@ -1,0 +1,35 @@
+﻿<Window x:Class="PerfumerProject.Windows.ClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PerfumerProject.Windows"
+        mc:Ignorable="d" 
+        Title="Окно клиента" Height="450" Width="800" Closing="close" WindowStartupLocation="CenterScreen" MinWidth="500" MinHeight="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="75"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Style="{StaticResource Border}"></Border>
+        <Border Style="{StaticResource Border}" Grid.Row="2"></Border>
+        <DataGrid Name="ProductListView" FontFamily="Candara" Grid.Row="1" FontSize="15" AlternatingRowBackground="#A5E887">
+            
+        </DataGrid>
+        <Button Click="CreateOrderClick" Grid.Row="2" Width="300" Height="50" HorizontalAlignment="Center" Style="{StaticResource button}" Margin="5" Content="Сформировать заказ">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="35"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Margin="5" Grid.Row="2" Width="200" HorizontalAlignment="Left" Height="50" Style="{StaticResource button}" Content="Назад" Click="Back">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="35"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
