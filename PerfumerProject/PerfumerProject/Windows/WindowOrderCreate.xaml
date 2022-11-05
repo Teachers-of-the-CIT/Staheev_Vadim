@@ -1,0 +1,35 @@
+﻿<Window x:Class="PerfumerProject.Windows.WindowOrderCreate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PerfumerProject.Windows"
+        mc:Ignorable="d"
+        Title="Формирование заказа" Height="800" Width="800" Closing="close" MinWidth="500" MinHeight="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition MinHeight="80"></RowDefinition>
+            <RowDefinition MinHeight="80"></RowDefinition>
+            <RowDefinition MinHeight="80"></RowDefinition>
+            <RowDefinition MinHeight="80"></RowDefinition>
+            <RowDefinition MinHeight="80"></RowDefinition>
+            <RowDefinition MinHeight="80" Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock VerticalAlignment="Center" Style="{StaticResource TextStandart}" HorizontalAlignment="Center" Grid.Row="3" Text="Желаемая дата получения"></TextBlock>
+        <TextBox Name="FullName" Margin="10" Background="Aquamarine" Style="{StaticResource TextBox}" Width="200" Height="40" VerticalAlignment="Bottom" Grid.Row="1"></TextBox>
+        <TextBlock VerticalAlignment="Center" Style="{StaticResource TextStandart}" HorizontalAlignment="Center" Grid.Row="1" Text="ФИО"></TextBlock>
+        <TextBlock Style="{StaticResource TextBig}" HorizontalAlignment="Center" Text="Формирование заказа"></TextBlock>
+        <TextBlock  Style="{StaticResource TextStandart}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Text="Пункт назначения"></TextBlock>
+        <ComboBox DisplayMemberPath="PostCode" Name="DestinationsBox" Margin="10"  Style="{StaticResource combo}" Width="200" Height="40" VerticalAlignment="Bottom" Grid.Row="2"></ComboBox>
+        <TextBox Name="DeliveryDate" Margin="10" Background="Aquamarine" Style="{StaticResource TextBox}" Width="200" Height="40" VerticalAlignment="Bottom" Grid.Row="3"></TextBox>
+        <TextBlock VerticalAlignment="Center" Style="{StaticResource TextStandart}" HorizontalAlignment="Center" Grid.Row="4" Text="Код получения"></TextBlock>
+        <TextBox Name="GetCode" Margin="10" Background="Aquamarine" Style="{StaticResource TextBox}" Width="200" Height="40" VerticalAlignment="Bottom" Grid.Row="4"></TextBox>
+        <Button Style="{StaticResource button}" Content="Сформировать" Click="CreateOrderClick" Grid.Row="8" Width="200" Height="60">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="35"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>

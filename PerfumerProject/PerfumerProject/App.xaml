@@ -1,0 +1,52 @@
+﻿<Application x:Class="PerfumerProject.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PerfumerProject"
+             StartupUri="Windows\MainWindow.xaml">
+    <Application.Resources>
+ 
+        <Style x:Key="TextBig" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="26"></Setter>
+            <Setter Property="FontFamily" Value="Candara"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Height" Value="45"></Setter>
+
+        </Style>
+        <Style x:Key="TextStandart" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="FontFamily" Value="Candara"></Setter>
+            <Setter Property="Height" Value="45"></Setter>
+        </Style>
+        <Style x:Key="TextBox" TargetType="TextBox">
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="FontFamily" Value="Candara"></Setter>
+            <Setter Property="Background" Value="#A5E887"></Setter>
+        </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="FontFamily" Value="Candara"></Setter>
+            <Setter Property="Background" Value="#A5E887"></Setter>
+        </Style>
+        <Style x:Key="button" TargetType="Button">
+            <Setter Property="Background" Value="#A5E887"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="FontFamily" Value="Candara"></Setter>
+            <Setter Property="FontWeight" Value="Black"></Setter>
+        </Style>
+        <Style x:Key="Border" TargetType="Border">
+            <Setter Property="Background" Value="#B3F4E9"></Setter>
+        </Style>
+        <Style TargetType="DataGridCell">
+            <Style.Setters>
+                <Setter Property="TextBlock.TextAlignment" Value="Center" />
+            </Style.Setters>
+        </Style>
+        <Style x:Key="combo" TargetType="ComboBox">
+            <Setter Property="FontFamily" Value="Candara"></Setter>
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="Foreground" Value="#0D9F9F"></Setter>
+            <Setter Property="Background" Value="Aquamarine"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>
